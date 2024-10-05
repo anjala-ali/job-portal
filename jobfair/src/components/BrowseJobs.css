@@ -1,0 +1,35 @@
+.job-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the spacing between cards */
+  }
+  
+  .job-card {
+    flex: 1 1 calc(33.333% - 16px); /* 3 cards per row with spacing */
+    box-sizing: border-box;
+    padding: 16px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px);
+    color: brown;
+  }
+  
+  @media (max-width: 768px) {
+    .job-card {
+      flex: 1 1 calc(50% - 16px); /* 2 cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .job-card {
+      flex: 1 1 100%; /* 1 card per row on very small screens */
+    }
+  }
+  
